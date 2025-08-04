@@ -1,0 +1,135 @@
+:root {
+  --teams-primary: #464eb8;
+  --teams-heading: #242424;
+  --teams-body: #444444;
+  --teams-link: #464eb8;
+  --teams-link-hover: #3b4090;
+  --teams-bg: #ffffff;
+  --button-shadow: rgba(70,78,184,0.10);
+}
+
+.teams-landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
+  margin: auto;
+  min-height: 100vh;
+  justify-content: center;
+  background: var(--teams-bg);
+  padding: 48px 32px;
+  box-sizing: border-box;
+  gap: 0; /* Handled by explicit margins below */
+}
+
+.teams-logo {
+  width: 128px;
+  height: 128px;
+  display: block;
+  margin-bottom: 32px;
+}
+
+.teams-heading {
+  text-align: center;
+  font-family: 'Segoe UI', Arial, 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--teams-heading);
+  line-height: 1.4;
+  margin-bottom: 28px;
+}
+
+.teams-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.teams-btn.primary {
+  width: 100%;
+  background: var(--teams-primary);
+  color: var(--accent-text, #ffffff);
+  border: none;
+  border-radius: 6px;
+  height: 48px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Arial, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.teams-btn.primary:hover,
+.teams-btn.primary:focus {
+  background: var(--teams-link-hover);
+  box-shadow: 0 4px 14px 0 var(--button-shadow);
+  outline: none;
+}
+
+.teams-link {
+  display: block;
+  text-align: center;
+  color: var(--teams-link);
+  font-size: 1rem;
+  font-family: 'Segoe UI', Arial, 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s, text-decoration 0.2s;
+  margin-bottom: 0;
+}
+.teams-link.web-link:hover,
+.teams-link.web-link:focus {
+  color: var(--teams-link-hover);
+  text-decoration: underline;
+  outline: none;
+}
+
+.launch-link {
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', Arial, 'Helvetica Neue', sans-serif;
+  color: #4f4f4f;
+  margin-top: 32px;
+}
+.launch-link .teams-link.launch-now {
+  display: inline;
+  color: var(--teams-link);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-left: 4px;
+  transition: color 0.2s;
+}
+.launch-link .teams-link.launch-now:hover,
+.launch-link .teams-link.launch-now:focus {
+  color: var(--teams-link-hover);
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .teams-landing-container {
+    max-width: 95vw;
+    padding: 24px 8px;
+  }
+  .teams-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+  }
+  .teams-heading {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  .teams-btn.primary, .teams-link {
+    font-size: 0.98rem;
+  }
+  .launch-link {
+    font-size: 0.9rem;
+    margin-top: 16px;
+  }
+}
